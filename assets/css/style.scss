@@ -21,13 +21,23 @@
     flex: 1;
     height: 100%;
     position: relative;
+    animation: move 30s linear infinite;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-66%);
+    transform: translateX(-33.33%);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
