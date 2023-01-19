@@ -17,9 +17,18 @@
 }
 
 .scrolling-images img {
-  width: 100px; /* adjust the width to match the desired width of the images */
-  height: 100%;
-  position: relative;
-  display: inline-block;
-  transition: transform 1s;
+    width: 100px;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
