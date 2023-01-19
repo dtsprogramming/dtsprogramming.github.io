@@ -46,14 +46,12 @@
 
 <script>
       var images = document.querySelectorAll('.scrolling-images img');
-      var current = 0;
 
-      function nextImage() {
-          var prev = (current - 1 + images.length) % images.length;
-          images[prev].style.transform = "translateX(0%)";
-          images[current].style.transform = "translateX(-"+ (current * 100) +"%)";
-          current = (current + 1) % images.length;
-      }
+  function nextImage() {
+      images.forEach(function(img) {
+          img.style.transform = "translateX(-"+ 100 +"%)";
+    });
+}
 
-      setInterval(nextImage, 3000);
+setInterval(nextImage, 3000);
 </script>
