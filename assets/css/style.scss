@@ -32,12 +32,3 @@
     transform: translateX(calc(-100% + ${imageWidthPercentage}%));
   }
 }
-
-@keyframes move {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
