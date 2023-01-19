@@ -9,17 +9,17 @@
 }
 
 .scrolling-images {
-  width: 100%;
+  width: 300px; /* adjust the width to match the number of images * image width */
   height: 300px;
   overflow: hidden;
   position: relative;
+  white-space: nowrap;
 }
 
 .scrolling-images img {
-  width: 33%;
+  width: 100px; /* adjust the width to match the desired width of the images */
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  display: inline-block;
   transition: transform 1s;
 }
