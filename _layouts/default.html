@@ -43,3 +43,12 @@
     </div>
   </body>
 </html>
+
+<script>
+  const images = document.querySelectorAll('.scrolling-images img');
+const imageWidthPercentage = 100 / images.length;
+
+images.forEach(image => {
+    image.style.width = `${imageWidthPercentage}%`;
+});
+</script>
