@@ -45,10 +45,19 @@
 </html>
 
 <script>
-  const images = document.querySelectorAll('.scrolling-images img');
-const imageWidthPercentage = 100 / images.length;
+  // Get the width of the first image
+const firstImg = document.querySelector('.scrolling-images img');
+const imgWidth = firstImg.offsetWidth;
 
-images.forEach(image => {
-    image.style.width = `${imageWidthPercentage}%`;
-});
+// Get the number of images
+const images = document.querySelectorAll('.scrolling-images img');
+const numImages = images.length;
+
+// Calculate the image width percentage
+const imageWidthPercentage = (imgWidth / document.body.offsetWidth) * 100;
+
+// Update the keyframe animation with the calculated percentage
+const keyframe = document.styleSheets[0].cssRules[0];
+keyframe.keyText = "0%, 100%";
+keyframe.cssText = `0% {transform: translateX(0%);} 100% {transform: translateX(calc(-100% + ${imageWidthPercentage}%));}`;
 </script>
