@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
-
+    
 {% seo %}
   </head>
 
@@ -34,14 +34,21 @@
         <p id="quote">
             “The world fears the inevitable plummet into the abyss. Watch for that moment and when it comes, do not hesitate to leap. It is only when you fall that you learn whether you can fly.” -Dragon Age: Origins- 
         </p>
+        <div class="scrolling-images">
+          <img src="assets/images/SuperUAT.avif" alt="Image 1">
+          <img src="assets/images/UntoldAdventures.avif" alt="Image 2">
+          <img src="image3.jpg" alt="Image 3">
+        </div>
       </section>
     </div>
-    
-    <div class="scrolling-images">
-  <img src="image1.jpg" alt="Image 1">
-  <img src="image2.jpg" alt="Image 2">
-  <img src="image3.jpg" alt="Image 3">
-</div>
-    
   </body>
 </html>
+
+<script>
+  const images = document.querySelectorAll('.scrolling-images img');
+const imageWidthPercentage = 100 / images.length;
+
+images.forEach(image => {
+    image.style.width = `${imageWidthPercentage}%`;
+});
+</script>
