@@ -17,11 +17,11 @@
 
 .scrolling-images img {
   width: 33%;
-  height: 75%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 1s;
+  transition: transform 1s;
 }
 
 @keyframes scroll {
