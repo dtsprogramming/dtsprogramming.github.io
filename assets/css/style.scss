@@ -16,12 +16,12 @@
 }
 
 .scrolling-images img {
-  width: 75%;
+  width: 33%;
   height: 75%;
   position: absolute;
   top: 0;
   left: 0;
-  animation: scroll 30s linear infinite;
+  transition: all 1s;
 }
 
 @keyframes scroll {
