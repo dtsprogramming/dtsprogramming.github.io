@@ -21,7 +21,6 @@
     flex: 1;
     height: 100%;
     position: relative;
-    animation: move 30s linear infinite;
 }
 
 @keyframes scroll {
@@ -29,6 +28,6 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(calc(-100% + ${imageWidthPercentage}%));
+    transform: translateX(-100%);
   }
 }
